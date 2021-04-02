@@ -1,0 +1,170 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Responsive_table :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link rel="stylesheet" th:href="@{/CSS/css2/bootstrap.min.css}" >
+<!-- //bootstrap-css -->
+<!-- Custom CSS -->
+<link th:href="@{/CSS/css2/style.css}" rel='stylesheet' type='text/css' />
+<link th:href="@{/CSS/css2/style-responsive.css}" rel="stylesheet"/>
+<!-- font CSS -->
+<link th:href='@{//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic}' rel='stylesheet' type='text/css'>
+<!-- font-awesome icons -->
+<link rel="stylesheet" th:href="@{/CSS/css2/font.css}" type="text/css"/>
+<link th:href="@{/CSS/css2/font-awesome.css}" rel="stylesheet"> 
+<!-- Add icon library -->
+<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!-- //font-awesome icons -->
+<script type="text/javascript" th:src="@{/JS/js2/jquery2.0.3.min.js}"></script>
+<script type="text/javascript" th:src="@{/JS/manageUser.js}"></script>
+
+</head>
+<body>
+<section id="container">
+<!--header start-->
+<header class="header fixed-top clearfix">
+<!--logo start-->
+
+<div class="brand">
+    <a th:href="@{/admin}">
+		<div class="brand" style="background: white;">
+		    <img alt="logoVNPOST" th:src="@{/images/img_vnpost.png}" style="display: block;
+		    			margin-left: auto; margin-right: auto; width: 60%; margin-top: auto;">
+		
+		</div>
+	</a>
+    <div class="sidebar-toggle-box">
+        <div class="fa fa-bars"></div>
+    </div>
+</div>
+<!--logo end-->
+
+<div class="nav notify-row" id="top_menu">
+    <!--  notification start -->
+    <ul class="nav top-menu">
+        <!-- settings start -->
+        
+        <!-- settings end -->
+        <!-- inbox dropdown start-->
+
+        <!-- inbox dropdown end -->
+        <!-- notification dropdown start-->
+
+        <!-- notification dropdown end -->
+    </ul>
+    <!--  notification end -->
+</div>
+<div class="top-nav clearfix">
+	
+	   
+
+	
+    <!--search & user info start-->
+    <ul class="nav pull-right top-menu">
+        <!-- user login dropdown start-->
+        <form th:action="@{/j_spring_security_logout}" method="post">
+			<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+			<button type="submit" class="btn btn-secondary"  value="Đăng xuất">
+				<span class="glyphicon glyphicon-off"></span>  Đăng xuất
+			</button>
+		</form>
+        <!-- user login dropdown end -->
+       
+    </ul>
+    <!--search & user info end-->
+</div>
+</header>
+<!--header end-->
+<!--sidebar start-->
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        <!-- sidebar menu start-->
+        <div class="leftside-navigation">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li class="sub-menu">
+                    <a class="active" th:href="@{/admin}">
+                        <span><i class="fa fa-user"></i>Quản lý tài khoản </span>
+                    </a>
+                    <ul class="sub">
+                        <li><a th:href="@{/manageUser/0/5}">Quản trị người dùng</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a class="active" th:href="@{/admin}">
+                        <span><i class="fa fa-product-hunt"></i>Quản lý sản phẩm </span>
+                    </a>
+                    <ul class="sub">
+                        <li><a th:href="@{/manageCategory/0/5}">Danh mục sản phẩm</a></li>
+                        <li><a th:href="@{/manageProduct/0/5}">Sản phẩm</a></li>
+                        <li><a th:href="@{/manageProductDetail/0/5}">Chi tiết sản phẩm</a></li>
+                        <li><a th:href="@{/manageSize/0/5}">Size sản phẩm</a></li>
+                        <li><a th:href="@{/manageColor/0/5}">Màu sản phẩm</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a class="active" th:href="@{/admin}">
+                        <span><i class="fa fa-cart-plus"></i>Quản lý hóa đơn </span>
+                    </a>
+                    <ul class="sub">
+                        <li><a th:href="@{/manageBill/0/5}">Đơn hàng</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a class="active" th:href="@{/admin}">
+                        <span><i class="fa fa-tags"></i>Quản Lý Khuyến Mại </span>
+                    </a>
+                    <ul class="sub">
+                        <li><a th:href="@{/admin2/0/5}">Danh sách khuyến mại</a></li>
+                        <li><a th:href="@{/admin3/0/5}">Sản phẩm</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a class="active" th:href="@{/admin}">
+                        <span><i class="fa fa-envelope"></i>Quản Lý Liên Hệ </span>
+                    </a>
+                    <ul class="sub">
+                        <li><a th:href="@{/manageAbout}">Giới thiệu</a></li>
+                        <li><a th:href="@{/manageContact/0/5}">Liên hệ</a></li>
+                    </ul>
+                </li>
+            </ul>           
+          </div>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+
+<!--sidebar end-->
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		
+</section>
+ <!-- footer -->
+		  
+  <!-- / footer -->
+</section>
+
+<!--main content end-->
+</section>
+<script th:src="@{/JS/js2/bootstrap.js}"></script>
+<script th:src="@{/JS/js2/jquery.dcjqaccordion.2.7.js}"></script>
+<script th:src="@{/JS/js2/scripts.js}"></script>
+<script th:src="@{/JS/js2/jquery.slimscroll.js}"></script>
+<script th:src="@{/JS/js2/jquery.nicescroll.js}"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script th:src="@{/JS/js2/jquery.scrollTo.js}"></script>
+</body>
+</html>

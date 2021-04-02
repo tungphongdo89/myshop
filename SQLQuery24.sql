@@ -8,4 +8,5 @@ insert into product values(N'thiết kế đơn giản và phù hợp cho cả n
 insert into product values(N'thiết kế đơn giản và phù hợp cho cả nam và nữ','8.jpg',100000,N'Áo phông TT8',2)
 insert into product values(N'thiết kế đơn giản và phù hợp cho cả nam và nữ','9.jpg',100000,N'Áo phông TT9',2)
 
+
 insert into product values(N'thiết kế đơn giản và phù hợp cho cả nam và nữ','10.jpg',100000,N'Áo phông TT10',2)
